@@ -11,6 +11,11 @@ const app = express()
 const PORT = process.env.PORT || 5000
 //импортируем модели
 const models = require('./models/models')
+const cors = require('cors')
+//Добавляем cors, чтобы можно было отправлять запросы из браузера
+app.use(cors())
+//Чтобы приложение могло парсить json-формат
+app.use(express.json())
 
 
 //Функция, которая подключается к базе данных и запускает сервер
