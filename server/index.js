@@ -9,6 +9,9 @@ const sequelize = require('./db')
 const app = express()
 //Из файла .env берем порт
 const PORT = process.env.PORT || 5000
+//импортируем модели
+const models = require('./models/models')
+
 
 //Функция, которая подключается к базе данных и запускает сервер
 const start = async () => {
