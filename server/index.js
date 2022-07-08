@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require("express")
 const {Sequelize} = require("sequelize");
+const router = require('./routes/index')
 
 //Импортируем объект-конструктор из файла db.js
 const sequelize = require('./db')
@@ -16,10 +17,9 @@ const cors = require('cors')
 app.use(cors())
 //Чтобы приложение могло парсить json-формат
 app.use(express.json())
+//Адрес по которому роутер должен обрабатываться в нашем случае '/api'
+app.use('/api', router)
 
-app.get('/', (req, res) => {
-    res.status(200).json({message: 'OK OK OK'})
-})
 
 
 //Функция, которая подключается к базе данных и запускает сервер

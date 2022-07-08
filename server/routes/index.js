@@ -13,8 +13,8 @@ const deviceRouter = require('./deviceRouter')
 
 //Указываем из каких под-роутеров состоит наш роутер)
 router.use('/user', userRouter)
-router.use('/type', typeRouter)
-router.use('/brand', brandRouter)
-router.use('/device', deviceRouter)
+// router.use('/type', typeRouter)
+// router.use('/brand', brandRouter)
+// router.use('/device', deviceRouter)
 
 module.exports = router
