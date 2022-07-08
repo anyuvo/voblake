@@ -17,6 +17,10 @@ app.use(cors())
 //Чтобы приложение могло парсить json-формат
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.status(200).json({message: 'OK OK OK'})
+})
+
 
 //Функция, которая подключается к базе данных и запускает сервер
 const start = async () => {
